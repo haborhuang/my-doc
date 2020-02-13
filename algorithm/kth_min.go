@@ -7,13 +7,12 @@ func main() {
 	s := []int{1, 3, 2, 6, -20, -2}
 	k := 3
 
-	// 思路一：排序获取。时间复杂度O(n*log2(n))
+	// 思路一：排序获取。时间复杂度O(n*log2(n))，空间复杂度为n
 	qsort(s, 0, len(s)-1)
 	fmt.Println(s[k-1])
 	fmt.Println(s)
 
-	// 思路二：维护k长度的有序数组，每次将数插入数组（二分法查找插入位置）。时间复杂度O(n*log2(k))
-	// TODO
+	// 思路二：维护k长度的有序数组，每次将数插入数组（二分法查找插入位置）。时间复杂度O(n*log2(k))，空间复杂度为k
 	sa := newSortedArray(k)
 	for _, n := range s {
 		sa.add(n)
