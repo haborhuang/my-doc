@@ -6,13 +6,33 @@
 
 ## 算法
 
-### LRU
+* LRU。可参考algorithm/lru/lru.go示例，使用map+双向链表实现
+* 环形打印二维数组。可参考algorithm/two_dimensional_array/print_in_circle.go示例
+* 接雨水。可参考algorithm/trapping_rain_water/trap.go示例
+* 找到第k小的值。可参考algorithm/kth_min.go示例
+* 最长不重复子串。滑动窗口法，可参考algorithm/sliding_window/max_non_repetitive_substring.go示例
+* 找到二叉树节点值之和的最大值。可参考algorithm/binary_tree/max_sum.go示例。
 
-可参考golang/lru/lru.go示例，使用map+双向链表实现
+## Golang
 
-### 环形打印二维数组
+### 进程、线程、goroutine区别
 
-可参考golang/two_dimensional_array/print_in_circle.go示例
+[参考资料](https://www.cnblogs.com/ghj1976/p/3642513.html)。
 
-### 接雨水
+* 进程拥有自己独立的堆和栈，既不共享堆，亦不共享栈，进程由操作系统调度。
+* 线程拥有自己独立的栈和共享的堆，共享堆，不共享栈，线程亦由操作系统调度(标准线程是的)。
+* 协程和线程一样共享堆，不共享栈，协程由程序员在协程的代码里显示调度。
 
+### goroutine和channel解析
+
+参考golang/channel_and_goroutine内容
+
+channel可参考golang/Understanding channels.pdf
+
+## 设计
+
+### 红包系统设计
+
+参考：
+* https://www.infoq.cn/article/2017hongbao-weixin/ 
+* https://blog.csdn.net/gb4215287/article/details/90112274
