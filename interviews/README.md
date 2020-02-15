@@ -36,3 +36,20 @@ channel可参考golang/Understanding channels.pdf
 参考：
 * https://www.infoq.cn/article/2017hongbao-weixin/ 
 * https://blog.csdn.net/gb4215287/article/details/90112274
+
+
+## MySQL
+
+### 索引
+
+参考mysql/index/目录内容
+
+B+树延伸知识：https://zhuanlan.zhihu.com/p/27700617
+
+### 事务
+
+参考mysql/transaction/目录内容
+
+### 主从
+
+主从同步，参考mysql/master-slave/目录内容。
