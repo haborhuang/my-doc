@@ -8,7 +8,7 @@
 
 * LRU。可参考algorithm/lru/lru.go示例，使用map+双向链表实现
 * 环形打印二维数组。可参考algorithm/two_dimensional_array/print_in_circle.go示例
-* 接雨水。可参考algorithm/trapping_rain_water/trap.go示例
+* 接雨水。可参考algorithm/trapping_rain_water/trap.go示例。
 * 找到第k小的值。可参考algorithm/kth_min.go示例
 * 最长不重复子串。滑动窗口法，可参考algorithm/sliding_window/max_non_repetitive_substring.go示例
 * 找到二叉树节点值之和的最大值。可参考algorithm/binary_tree/max_sum.go示例。
