@@ -44,5 +44,5 @@
 * 优化技术架构，降低数据库单点压力。
 * 消除慢查询。
 * 提升硬件性能。
-* 优化MySQL配置。
+* 优化MySQL配置选项。
 * 并行复制。5.7版本后支持，参考https://www.cnblogs.com/xiaotengyi/p/5532191.html
