@@ -33,6 +33,10 @@ channel可参考golang/Understanding channels.pdf
 
 参考golang/gc/目录内容
 
+## context
+
+参考golang/context/目录内容
+
 # 设计
 
 ## 红包系统设计
