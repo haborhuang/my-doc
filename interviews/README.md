@@ -12,6 +12,8 @@
 * 找到第k小的值。可参考algorithm/kth_min.go示例
 * 最长不重复子串。滑动窗口法，可参考algorithm/sliding_window/max_non_repetitive_substring.go示例
 * 找到二叉树节点值之和的最大值。可参考algorithm/binary_tree/max_sum.go示例。
+* 判断字符单向链表是否为回文。TODO：从中间位置拆分成两个链表，倒置其中一个后与另一个比较是否相同。
+* 数组中某一元素出现概率超过50%，找出该元素。TODO：
 
 # Golang
 
@@ -37,6 +39,14 @@ channel可参考golang/Understanding channels.pdf
 
 参考golang/context/目录内容
 
+## 内存逃逸
+
+参考golang/逃逸分析/目录内容
+
+## 内存模型
+
+参考golang/内存模型/目录内容
+
 # 设计
 
 ## 红包系统设计
@@ -50,7 +60,6 @@ channel可参考golang/Understanding channels.pdf
 参考：
 * https://www.zhihu.com/question/19715683
 * feed流系统设计：https://yq.aliyun.com/articles/706808
-
 
 # MySQL
 
@@ -111,3 +120,45 @@ channel可参考golang/Understanding channels.pdf
 ## Cookie
 
 参考https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies
+
+# 分布式
+
+https://blog.csdn.net/fct2001140269/article/details/84503176
+
+CAP原则：
+* C 一致性，A 可用性，P 网络分区容错性。
+* CAP原则简单理解为：在分布式系统中，三个特性无法同时满足。
+* 多数情况下，网络分区时常发生，在系统设计中需要在C和A中做权衡。
+* 一些场景要求强一致性（如银行），则需要在A和P中做权衡。
+
+BASE：
+* BA 基本可用，S 软状态，E 最终一直性。
+* BA。出现异常故障时，允许损失部分可用性。如上游服务异常时，响应时间允许由0.5s变为1s；促销活动时，为保障购物系统稳定性，可将部分用户引导至降级页面。
+* S。允许数据有中间状态，数据在节点间同步允许一定的延迟。
+* E。不需要保证强一致性，而是经过一段延迟，数据在节点间最终一致。
+
+* CAP和BASE原则。常见中间件对CAP的应用。
+* ETCD & ZK 协议
+
+# MQ
+
+## RabbitMQ
+
+简介：https://blog.csdn.net/fct2001140269/article/details/84503176
+
+概念：
+* exchange。对queue的路由规则
+* binding。exchange与queue的绑定
+* queue。消息队列
+* 发布者：
+  * 通常是面向exchange发送，exchange负责根据binding设置将消息路由到满足条件的queue。
+  * 可以直接向指定的queue发送消息：不指定exchange，且routing key与queue name一致。
+* queue会将消息均分给消费者。
+
+exchange类型：
+* fanout。用于广播。发消息时routing key会被忽略。消费者通过binding关联queue和exchange。只要建立binding，消息就会转发到queue。
+* direct。routing key和binding key时，消息才会被转发到绑定的queue。
+* topic。binding key可指定通配符，满足规则的消息会被转发到绑定的queue。
+
+## Kafka
+
