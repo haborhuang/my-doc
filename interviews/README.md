@@ -15,8 +15,9 @@
 * 判断字符单向链表是否为回文。TODO：从中间位置拆分成两个链表，倒置其中一个后与另一个比较是否相同。
 * 数组中某一元素出现概率超过50%，找出该元素。TODO：
 * 有序链表合并。可参考algorithm/link_list/join_sorted.go示例。
-* 找出分界点元素，该元素大于左侧所有值，小于右侧所有值。可参考algorithm/array/find_middle.go示例。
+* 找出分界点元素，该元素大于左侧所有值，小于右侧所有值。可参考algorithm/array/find_partition_point.go示例。
 * 二叉树根节点到叶子节点所有路径中，找出节点值和为K的所有路径。可参考algorithm/binary_tree/find_paths_for_sum.go。
+* 对奇数位元素升序，偶数位元素降序的单向链表排序。可参考algorithm/link_list/parity_sort.go。
 
 # Golang
 
