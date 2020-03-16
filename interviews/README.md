@@ -18,6 +18,7 @@
 * 找出分界点元素，该元素大于左侧所有值，小于右侧所有值。可参考algorithm/array/find_partition_point.go示例。
 * 二叉树根节点到叶子节点所有路径中，找出节点值和为K的所有路径。可参考algorithm/binary_tree/find_paths_for_sum.go。
 * 对奇数位元素升序，偶数位元素降序的单向链表排序。可参考algorithm/link_list/parity_sort.go。
+* 将二叉搜索树转为升序的双向链表。可参考algorithm/binary_tree/to_sorted_link_list.go。
 
 # Golang
 
