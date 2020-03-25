@@ -70,6 +70,23 @@ channel可参考golang/Understanding channels.pdf
 * https://www.zhihu.com/question/19715683
 * feed流系统设计：https://yq.aliyun.com/articles/706808
 
+## 数据库扩容迁移
+
+分库分表设计之初考虑扩容实现，如在id中包含分库分表因子，并预留出扩容空间。如三位数字表示因子，只使用000~100，剩下预留。
+
+如果库表较少，可使用以下方案：
+* 新增一倍节点，与原节点进行同步。
+* 修改分片规则。
+* 清理：取消同步，删除新增节点冗余数据（因为第一步同步了全量数据）。
+
+参考https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/89839471
+
+## Redis高可用方案
+
+* 3.0的Cluster方案
+* 双主 + keepalived
+* 主从 + sentinel
+
 # MySQL
 
 * 索引。参考mysql/index/目录内容。B+树延伸知识：https://zhuanlan.zhihu.com/p/27700617

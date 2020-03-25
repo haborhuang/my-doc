@@ -7,7 +7,7 @@
 
 # 事务实现原理
 
-参考 https://www.cnblogs.com/davygeek/p/7995072.html
+InnoDB引擎事务实现原理参考 https://www.cnblogs.com/davygeek/p/7995072.html
 
 ## 原子性
 
